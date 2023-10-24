@@ -1,7 +1,7 @@
 # Weather App Implementation
 
 ## Project Description
-Implement an Android Weather App that provides real-time weather information for specific locations. The app should allow users to search for weather data by city name, display current weather conditions, including temperature and weather description, and provide a 5-day weather forecast. The app should also support offline access to cached data.
+Implement an Android Weather App that provides real-time weather information for specific locations. The app should show weather data based on user location, display current weather conditions, including temperature and weather description, and provide a 7-day weather forecast. The app should also support offline access to cached data.
 
 ## Technologies and Tools
 - Android Studio
@@ -18,10 +18,13 @@ Implement an Android Weather App that provides real-time weather information for
 
 ## Project Milestones and Deadlines
 - **Day 1-2: Project Setup and UI Design**
-    - Set up the Android project in Android Studio.
-    - Design the user interface (UI)
-- **Day 2-3: Network Requests and API Integration**
+   - Download and install [Android Studio](https://developer.android.com/studio)
+   - Set up the Android project in Android Studio.
+   - Design the user interface (UI)
+   - Implement the UI design using Layouts in your project
+- **Day 2-3: Network Requests, API Integration and Location request**
     - Implement Retrofit for making network requests.
+    - Implement getting user`s last known location for weather requests
     - Create an interface for fetching weather data from the Open-Meteo API.
     - Integrate Coroutines for handling asynchronous network requests.
     - Use LiveData for real-time UI updates with both current weather and the 7-day weather forecast.
@@ -31,43 +34,36 @@ Implement an Android Weather App that provides real-time weather information for
 - **Day 5-6: Background Tasks**
     - Use WorkManager to schedule background tasks
 
+## App Design
+The app should have the following key design elements:
+
+- **Navigation**: Create a user-friendly navigation system that allows users to seamlessly switch between the current weather view and the 7-day weather forecast.
+
+- **Current Weather**: Design a clear and engaging interface for displaying current weather data, with at least three relevant weather parameters(Temperature, max temperature, min temperature, rain, humidity, etc.). This interface should also include hourly weather information for the current day.
+
+- **Five-Day Weather Forecast**: Create a visually appealing interface to present a list of a 7-day weather forecast. Same as with current weather screen, it should display some relevant weather data for each day.
+
+- **Optional Feature**: Location-Based Weather Search. If implemented, the app should enable users to search for weather information by location.
+
 ## Project Deliverables
 - A functional Android Weather App for real-time weather data updates.
 - Display of both current weather and a 7-day weather forecast.
 - Offline access to cached weather information.
 - Automatic background updates of weather data, and/or user notifications
 
-## Tasks
-### General
-- Implement a user interface with the ability to navigate between current weather and the 7-day forecast.
-- Fetch weather data from API and cache it (Use Retrofit for networking, Room for data persistence).
-- Implement necessary casting of received data.
-- Add background tasks such as user notifications.
-- Use the current user location to display weather.
-
-### Current Weather
-- Write a user-friendly interface for current weather data as well as hourly weather for the current day. Should display at least 3 weather parameters (Temperature, high, low, rain, humidity, etc.).
-- Display the fetched data from the API.
-
-### Five-day Weather
-- Write a user-friendly interface, with a list of weather forecasts for 7 days.
-- Display the fetched data from the API.
-
-**Optional:**
-- Implement weather search by location.
 
 ## How to Use an API
 Here is the official documentation of the free, non-commercial weather API: [Open-Meteo API Documentation](https://open-meteo.com/en/docs). It provides a list of available weather parameters for current, hourly, and daily weather.
 
-![](img.png)
+![](Current_weather_api_url_builder_example.png)
 
 To generate an API URL, pick the parameters needed in the app, and the link will appear below in the API URL field (Click on Reload Chart to regenerate the link).
 
-![](img_1.png)
+![](Reload_chart_button.png)
 
 To implement weather coding, use this list from the documentation.
 
-![](img_2.png)
+![](Weather_interpretation_codes.png)
 
 **Important:**
 Longitude and latitude of a location are required fields for this weather API call, as well as timezone (You can use `timezone=auto`). Also, recommend using `timeformat=unixtime` for future timestamp parsing.
@@ -77,7 +73,7 @@ To implement optional weather search by city, you can use the [Geocoding API](ht
 ### Example of API call:
 Example of API URL:
 
-![](img_3.png)
+![](Current_weather_api_url_example.png)
 
 ### Example of JSON response:
 ```json
