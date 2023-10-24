@@ -41,7 +41,7 @@ The app should have the following key design elements:
 
 - **Current Weather**: Design a clear and engaging interface for displaying current weather data, with at least three relevant weather parameters(Temperature, max temperature, min temperature, rain, humidity, etc.). This interface should also include hourly weather information for the current day.
 
-- **Five-Day Weather Forecast**: Create a visually appealing interface to present a list of a 7-day weather forecast. Same as with current weather screen, it should display some relevant weather data for each day.
+- **Seven-Day Weather Forecast**: Create a visually appealing interface to present a list of a 7-day weather forecast. Same as with current weather screen, it should display some relevant weather data for each day.
 
 - **Optional Feature**: Location-Based Weather Search. If implemented, the app should enable users to search for weather information by location.
 
