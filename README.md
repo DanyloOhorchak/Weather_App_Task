@@ -45,6 +45,19 @@ The app should have the following key design elements:
 
 - **Optional Feature**: Location-Based Weather Search. If implemented, the app should enable users to search for weather information by location.
 
+**Here is an example of how similar app can look**
+
+Current weather screen, don't pay attention to the settings tab or other functionality that is not described above
+
+![](Current_weeather_screen_example.png)
+
+An example of daily weather forecast screen. In this example daily weather details expand on click, as seen on the image, but such functionality is optional for your app.
+
+![](Daily_weather_screen_example.png)
+
+Use the ui of this app as a reference for your own, customize and change it as you see fit for your app. 
+
+
 ## Project Deliverables
 - A functional Android Weather App for real-time weather data updates.
 - Display of both current weather and a 7-day weather forecast.
